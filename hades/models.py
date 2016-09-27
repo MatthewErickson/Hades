@@ -4,7 +4,6 @@ from django import forms
 from django.db import models
 from django.forms import ModelForm
 from django.utils import timezone
-
 # Create your models here.
 
 class Blog(models.Model):
@@ -24,8 +23,9 @@ class Show(models.Model):
 class Episode(models.Model):
 	show = models.ForeignKey(Show, on_delete=models.CASCADE)
 	name = models.CharField(max_length=64, default="")
-	season = models.IntegerField(default=0)
-	number = models.IntegerField(default=0)
+	season = models.IntegerField()
+	number = models.IntegerField()
+	url = models.URLField(max_length=150, default="")
 
 	def __str__(self):
 		return self.name
