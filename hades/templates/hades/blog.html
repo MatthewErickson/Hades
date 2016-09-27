@@ -1,0 +1,76 @@
+{% extends "hades/base.html" %}
+{% load static %}
+
+{% block title %}Hades - Blog{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="left col-xs-4">	
+			<a id="prev" class="left">Prev</a>
+		</div>
+		<!-- Create new blog entry -->
+		<div class="center col-xs-4">
+			<button class="container btn btn-primary hades-button" data-toggle="collapse" data-target="#createEntry">
+				Add
+			</button>
+		</div>
+		<div class="right col-xs-4">
+			<a id="next" class="right">Next</a>
+		</div>
+	</div>
+
+	<!-- Collapsable area -->
+	<div id="createEntry" class="container collapse">
+		<form class="form-group" action="{% url 'hades:blog' %}" method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input class="btn btn-success hades-button" type="submit" value="Submit">
+		</form>
+	</div>
+
+	<!-- Start of blog entries -->
+	{% if blogs %}
+		{% for blog in blogs %}
+			<div class="entry">
+				<div>
+					<h2><strong>{{ blog.title }}</strong></h2>
+				</div>
+				<p><i>{{ blog.post_date }}</i></p>
+				<div id="{{ blog.id }}" class="entry-content">
+					<p>{{ blog.content }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	{% else %}
+		<h1>No blog entries</h1>
+	{% endif %}
+</div>
+{% endblock %}
+
+{% block css %}
+	{{ block.super }}
+	<link rel="stylesheet" type="text/css" href="{% static 'hades/css/blog.css' %}">
+{% endblock %}
+
+{% block javascript %}
+	{{ block.super }}
+
+<script type="text/javascript">
+	var page = parseInt({{ page }}),
+		lastPage = parseInt({{ lastPage }}),
+		$prev = $("#prev"),
+		$next = $("#next");
+
+	if (page === 0) {
+		$prev.css('visibility', 'hidden');
+	}
+
+	if (page >= lastPage) {
+		$next.css('visibility', 'hidden');
+	}
+
+	$prev.attr('href', '/blog/' + (page-1));
+	$next.attr('href', '/blog/' + (page+1));
+</script>
+{% endblock %}

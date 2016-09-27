@@ -1,0 +1,8 @@
+{% extends "hades/base.html" %}
+
+{% block title %}Page Failure{% endblock %}
+
+{% block content %}
+	<h1>{{ message }}</h1>
+	<p>Request from: {{ ip }} at {{ time }}</p>
+{% endblock %}

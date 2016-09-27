@@ -1,0 +1,12 @@
+{% extends "hades/base.html" %}
+{% load static %}
+
+{% block title %}Hades - Profile{% endblock %}
+
+{% block content %}
+<div class="container center">
+	<form class="form-group" action="." method="POST">
+		{% csrf_token %}
+	</form>
+</div>
+{% endblock %}

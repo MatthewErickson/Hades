@@ -1,0 +1,17 @@
+{% extends "hades/base.html" %}
+{% load static %}
+
+{% block title %}Hades - Home{% endblock %}
+
+{% block content %}
+<div class="container">
+	{% if user.is_authenticated %}
+		<h2>Welcome, {{ user.first_name }}</h2>
+	{% else %}
+		<h2>Hello!</h2>
+		<p>Looks like you're not logged in.</p>
+		<p>Sign up for an account <a href="{% url 'hades:signup' %}">here</a></p>
+		<p>Or login <a href="{% url 'hades:login' %}">here</a> if you already have an account</p>		
+	{% endif %}
+</div>
+{% endblock %}
