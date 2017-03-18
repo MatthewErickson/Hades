@@ -14,19 +14,3 @@ class Blog(models.Model):
 	def __str__(self):
 		return self.title
 
-class Show(models.Model):
-	name = models.CharField(max_length=64, default="")
-
-	def __str__(self):
-		return self.name
-
-class Episode(models.Model):
-	show = models.ForeignKey(Show, on_delete=models.CASCADE)
-	name = models.CharField(max_length=64, default="")
-	season = models.IntegerField()
-	number = models.IntegerField()
-	url = models.URLField(max_length=150, default="")
-
-	def __str__(self):
-		return self.name
-		#return "S%d-E%d: %s" % (self.season, self.number, self.name)
