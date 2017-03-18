@@ -3,14 +3,14 @@
 
 {% block header %}
 	<div class="header container">
-		<ul class="nav navbar-nav">
-			<div>
-				<li><a href="{% url 'hades:index' %}">Home</a></li>
-			</div>
-			<div>
-				<li><a href="{% url 'hades:blog' %}">Blog</a></li>
-			</div>
-		</ul>
+		<div class="center">
+			<span style="padding: 1em">
+				<a href="{% url 'hades:index' %}">Home</a>
+			</span>
+			<span style="padding: 1em">
+				<a href="{% url 'hades:blog' %}">Blog</a>
+			</span>
+		</div>
 	</div>
 {% endblock %}
 
