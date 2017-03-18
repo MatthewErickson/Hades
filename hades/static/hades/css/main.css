@@ -4,38 +4,12 @@ html {
 }
 
 body {
+    font-size: 1.0em;
 	font-family: "Times New Roman", Times, serif;
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
 	background: linear-gradient(#DDD, #BBB, #999, #BBB, #DDD);
-}
-
-code {
-	font-family: "Times New Roman", Times, serif;
-	background-color: inherit;
-	color: black;
-}
-
-video {
-	background-color: #EEE;
-	max-width: 1280px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-.navbar-nav a {
-	font-size: 20px;
-}
-
-.navbar-header a {
-	font-size: 24px;
-	font-weight: bold;
 }
 
 .container {
@@ -48,7 +22,6 @@ input::-webkit-inner-spin-button {
 
 .demonic {
 	color: red;
-	font-size: 48px;
 }
 
 .footer {
@@ -56,11 +29,7 @@ input::-webkit-inner-spin-button {
 	padding: 10px;
 	margin-bottom: 10px;
 	margin-top: 10px;
-	background-color: #CACACA;
 	opacity: 50%;
-}
-
-.footer {
 	text-decoration: none;
 }
 
@@ -80,14 +49,6 @@ input::-webkit-inner-spin-button {
 	display: inline;
 }
 
-.left {
-	float: left;
-}
-
-.right {
-	float: right;
-}
-
 .hades-button {
 	text-align: center;
 	width: 100%;
@@ -105,10 +66,6 @@ input::-webkit-inner-spin-button {
 
 .gone {
 	display: none; 
-}
-
-.navbar-toggle {
-	z-index: 3;
 }
 
 .error {

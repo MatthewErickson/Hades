@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff4ecd4-500d-4d88-a9ae-faa6ab75f00a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0002_auto_20160911_1955.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0003_auto_20160912_0136.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0004_auto_20160912_0137.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0005_auto_20160912_0141.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0006_auto_20160912_0419.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0007_auto_20160912_0505.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0008_auto_20160914_2211.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0009_auto_20160914_2222.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0010_auto_20160914_2306.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0011_auto_20160914_2315.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0012_auto_20160915_0703.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0013_auto_20160916_0832.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0014_auto_20160916_0837.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0015_auto_20160917_1759.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0016_auto_20160917_2303.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0017_auto_20160917_2314.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0018_auto_20160917_2323.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0019_auto_20160918_0042.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0020_auto_20160925_1400.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0021_auto_20160926_2203.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/migrations/0022_auto_20160926_2231.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/static/hades/css/sudoku.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/static/hades/css/sudoku.cssa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/static/hades/js/sudoku.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/static/hades/js/video.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hades/static/hades/res/easy.sudoku" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hades/static/hades/css/main.css" afterPath="$PROJECT_DIR$/hades/static/hades/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hades/templates/hades/base.html" afterPath="$PROJECT_DIR$/hades/templates/hades/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hades/templates/hades/index.html" afterPath="$PROJECT_DIR$/hades/templates/hades/index.html" />
     </list>
@@ -54,28 +28,38 @@
       <file leaf-file-name="blog.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hades/templates/hades/blog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-17.032259">
+              <caret line="24" column="63" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hades/templates/hades/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.19768934">
+              <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hades/templates/hades/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40590405">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state vertical-scroll-proportion="-3.548387">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hades/static/hades/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -120,8 +104,9 @@
         <option value="$PROJECT_DIR$/hades/forms.py" />
         <option value="$PROJECT_DIR$/hades/admin.py" />
         <option value="$PROJECT_DIR$/hades/views.py" />
-        <option value="$PROJECT_DIR$/hades/templates/hades/base.html" />
+        <option value="$PROJECT_DIR$/hades/static/hades/css/main.css" />
         <option value="$PROJECT_DIR$/hades/templates/hades/index.html" />
+        <option value="$PROJECT_DIR$/hades/templates/hades/base.html" />
       </list>
     </option>
   </component>
@@ -224,7 +209,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hades" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -651,14 +666,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hades/static/hades/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hades/static/hades/css/bootstrap-theme.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -707,26 +714,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hades/templates/hades/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hades/templates/hades/blog.html">
+    <entry file="file://$PROJECT_DIR$/hades/static/hades/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hades/templates/hades/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40590405">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        <state vertical-scroll-proportion="-3.548387">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hades/templates/hades/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.032259">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hades/templates/hades/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19768934">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
           <folding />
         </state>
       </provider>
