@@ -4,8 +4,12 @@
 {% block header %}
 	<div class="header container">
 		<ul class="nav navbar-nav">
-			<li>Home</li>
-			<li>Blog</li>
+			<div>
+				<li><a href="{% url 'hades:index' %}">Home</a></li>
+			</div>
+			<div>
+				<li><a href="{% url 'hades:blog' %}">Blog</a></li>
+			</div>
 		</ul>
 	</div>
 {% endblock %}
