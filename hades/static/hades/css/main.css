@@ -38,6 +38,7 @@ larger {
     margin-top: 1em;
     opacity: 50%;
     text-decoration: none;
+    background: red;
 }
 
 .footer {
