@@ -11,5 +11,8 @@ urlpatterns = [
 	url(r'^blog/$', views.blog , name='blog'),
 	url(r'^blog/(?P<page>[0-9]+)$', views.blog, name='blog'),
 
+	url(r'^nerdy$', views.nerdy, name='nerdy'),
+    url(r'^nerdy/.*$', views.nerdy, name='nerdy'),
+
 	url(r'^.+$', views.notFound, name='notFound'),
 ]

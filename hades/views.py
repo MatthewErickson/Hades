@@ -65,6 +65,10 @@ def submitBlog(title, content):
 	blog = Blog(title=title, content=content, post_date=post_date)
 	blog.save()
 
+def nerdy(request):
+    return render(request, 'hades/nerdy.html')
+
+
 class BadRequestCounter(dict):
 	def __missing__(self, key):
 		return 0
