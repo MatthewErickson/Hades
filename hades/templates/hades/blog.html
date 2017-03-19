@@ -6,17 +6,12 @@
 {% block content %}
 <div class="container">
 	<div class="row">
-		<div class="left col-xs-4">	
-			<a id="prev" class="left">Prev</a>
+		<div class="left col-xs-4">
+			<button class="container btn btn-primary hades-button"><a id="prev">Prev</a></button>
 		</div>
-		<!-- Create new blog entry -->
-		<div class="center col-xs-4">
-			<button class="container btn btn-primary hades-button" data-toggle="collapse" data-target="#createEntry">
-				Add
-			</button>
-		</div>
+
 		<div class="right col-xs-4">
-			<a id="next" class="right">Next</a>
+			<button class="container btn btn-primary hades-button"><a id="next">Next</a></button>
 		</div>
 	</div>
 
@@ -62,7 +57,7 @@
 		$prev = $("#prev"),
 		$next = $("#next");
 
-	if (page === 0) {
+	if (page <= 0) {
 		$prev.css('visibility', 'hidden');
 	}
 

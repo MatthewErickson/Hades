@@ -9,6 +9,7 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 	background: linear-gradient(#DDD, #BBB, #999, #BBB, #DDD);
+	font-size: 2em;
 }
 
 .container {
@@ -25,10 +26,6 @@ normal {
 
 larger {
     font-size: 2em;
-}
-
-.demonic {
-	color: red;
 }
 
 .header {
@@ -61,13 +58,8 @@ larger {
 	text-align: right;
 }
 
-.inline {
-	display: inline;
-}
-
 .hades-button {
 	text-align: center;
-	width: 100%;
 	font-size: 16px;
 }
 
@@ -76,12 +68,16 @@ larger {
 	margin-bottom: 10px;
 }
 
-.hidden {
-	visibility: hidden;
+.inline {
+	display: inline;
 }
 
 .gone {
-	display: none; 
+	display: none;
+}
+
+.hidden {
+	visibility: hidden;
 }
 
 .error {
