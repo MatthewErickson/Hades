@@ -28,7 +28,7 @@ larger {
 .header {
     width: 100%;
     padding: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.25em;
     margin-top: 1em;
     opacity: 50%;
     text-decoration: none;
@@ -37,7 +37,7 @@ larger {
 .footer {
 	width: 100%;
 	padding: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 0.25em;
 	margin-top: 1em;
 	opacity: 50%;
 	text-decoration: none;
