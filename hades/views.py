@@ -15,7 +15,7 @@ from .forms import BlogForm
 # Misc. imports #
 import datetime, time
 
-pageSize = 15
+pageSize = 2
 
 # View functions #
 def index(request):

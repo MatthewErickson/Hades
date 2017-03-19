@@ -19,7 +19,7 @@
 	</div>
 
 	<!-- Collapsible area -->
-	<div id="createEntry" class="container">
+	<div id="createEntry" class="container col-xs-12">
 		<form class="form-group" action="{% url 'hades:blog' %}" method="POST">
 			{% csrf_token %}
 			{{ form.as_p }}
