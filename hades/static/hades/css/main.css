@@ -10,6 +10,7 @@ body {
 	overflow-x: hidden;
 	background: linear-gradient(#DDD, #BBB, #999, #BBB, #DDD);
 	font-size: 2em;
+	text-overflow: hidden;
 }
 
 .container {
@@ -51,16 +52,11 @@ larger {
 }
 
 .left {
-	text-align: left;
+	float: left;
 }
 
 .right {
-	text-align: right;
-}
-
-.hades-button {
-	text-align: center;
-	font-size: 16px;
+	float: right;
 }
 
 .margin10 {

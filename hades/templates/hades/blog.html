@@ -5,21 +5,7 @@
 
 {% block content %}
 <div class="container">
-	<div class="row">
-		<div class="left col-xs-4">
-			<a id="prev">
-				<button class="container btn btn-primary hades-button">Prev</button>
-			</a>
-		</div>
-		<div class="left col-xs-4">
-			<a id="next">
-				<button class="container btn btn-primary hades-button">Next</button>
-			</a>
-		</div>
-	</div>
-
-	<!-- Collapsible area -->
-	<div id="createEntry" class="container col-xs-12">
+	<div id="createEntry" class="container row">
 		<form class="form-group" action="{% url 'hades:blog' %}" method="POST">
 			{% csrf_token %}
 			{{ form.as_p }}
@@ -27,12 +13,24 @@
 		</form>
 	</div>
 
-	<!-- Start of blog entries -->
+	<div class="row">
+		<div class="left col-xs-4 normal">
+			<a id="prev">
+				<button class="container btn btn-default center">Prev</button>
+			</a>
+		</div>
+		<div class="right col-xs-4 normal">
+			<a id="next">
+				<button class="container btn btn-default center">Next</button>
+			</a>
+		</div>
+	</div>
+
 	{% if blogs %}
 		{% for blog in blogs %}
 			<div class="entry">
 				<div>
-					<h2><strong>{{ blog.title }}</strong></h2>
+					<h3><strong>{{ blog.title }}</strong></h3>
 				</div>
 				<p><i>{{ blog.post_date }}</i></p>
 				<div id="{{ blog.id }}" class="entry-content">
@@ -41,7 +39,7 @@
 			</div>
 		{% endfor %}
 	{% else %}
-		<h1>No blog entries</h1>
+		<h3>No blog entries</h3>
 	{% endif %}
 </div>
 {% endblock %}
