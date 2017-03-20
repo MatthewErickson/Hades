@@ -12,6 +12,11 @@ body {
 	font-size: 2em;
 }
 
+img {
+    padding: 5px;
+    margin: 5px;
+}
+
 .container {
 	width: 100%;
 }
