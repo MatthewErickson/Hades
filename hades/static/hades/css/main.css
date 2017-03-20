@@ -10,7 +10,6 @@ body {
 	overflow-x: hidden;
 	background: #CCC;
 	font-size: 2em;
-	text-overflow: hidden;
 }
 
 .container {
