@@ -89,18 +89,18 @@ counter = BadRequestCounter()
 def notFound(request, message=None):
     incrementPageView('404')
     ip = request.META['REMOTE_ADDR']
-	counter[ip] += 1
-	if counter[ip] > 10:
-		# do something here #
-		return HttpResponse("stop")
-	
-	if message is None:
-		message = "404 - Page not found"
+    counter[ip] += 1
+    if counter[ip] > 10:
+        # do something here #
+        return HttpResponse("stop")
 
-	time = timezone.now()
-	print("Not found request from: " + ip)
-	return render(request, "hades/notFound.html", {
-		'ip' : ip,
-		'time': time,
-		'message': message,
-	})
+    if message is None:
+        message = "404 - Page not found"
+
+    time = timezone.now()
+    print("Not found request from: " + ip)
+    return render(request, "hades/notFound.html", {
+        'ip' : ip,
+        'time': time,
+        'message': message,
+    })
