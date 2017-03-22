@@ -20,7 +20,7 @@ pageSize = 2
 def incrementPageView(name):
     pageView = PageView.objects.filter(page_name=name).first()
     if pageView is None:
-        pageView = PageView(page_name=name)
+        pageView = PageView(page_name=name, page_count=0)
     pageView.page_count += 1
     pageView.save()
 
