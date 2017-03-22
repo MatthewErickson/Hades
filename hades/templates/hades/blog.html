@@ -5,15 +5,6 @@
 
 {% block content %}
 <div class="container">
-	<button class="btn btn-default center" onclick="toggleForm()">Create entry</button>
-	<div id="createEntry" class="container row gone">
-		<form class="form-group" action="{% url 'hades:blog' %}" method="POST">
-			{% csrf_token %}
-			{{ form.as_p }}
-			<input class="btn btn-primary" type="submit" value="Submit">
-		</form>
-	</div>
-
 	<div class="row">
 		<div class="left col-xs-4 normal">
 			<a id="prev">
@@ -42,6 +33,16 @@
 	{% else %}
 		<h3>No blog entries</h3>
 	{% endif %}
+	<div class="container center">
+		<button class="btn btn-default center" onclick="toggleForm()">Create entry</button>
+	</div>
+	<div id="createEntry" class="container row gone">
+		<form class="form-group" action="{% url 'hades:blog' %}" method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input class="btn btn-primary" type="submit" value="Submit">
+		</form>
+	</div>
 </div>
 {% endblock %}
 
