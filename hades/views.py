@@ -27,7 +27,7 @@ def incrementPageView(name):
 # View functions #
 def index(request):
     incrementPageView('index')
-	return render(request, 'hades/index.html')
+    return render(request, 'hades/index.html')
 
 def blog(request, page=-1):
 	if request.method == 'POST':
@@ -37,7 +37,7 @@ def blog(request, page=-1):
 			return redirect('hades:blog')
 	else:
 	    incrementPageView('blog')
-		form = BlogForm()
+	    form = BlogForm()
 	
 	allBlogs = Blog.objects.order_by('-post_date')
 	length = len(allBlogs)
@@ -88,7 +88,7 @@ counter = BadRequestCounter()
 @cache_control(private=True, max_age=60*60*24)
 def notFound(request, message=None):
     incrementPageView('404')
-	ip = request.META['REMOTE_ADDR']
+    ip = request.META['REMOTE_ADDR']
 	counter[ip] += 1
 	if counter[ip] > 10:
 		# do something here #
