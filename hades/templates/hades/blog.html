@@ -8,12 +8,12 @@
 	{% if blogs %}
 		<div class="row">
 			<div class="left col-xs-4 normal">
-				<a id="prev">
+				<a id="prev" class="gone">
 					<button class="container btn btn-default center">Prev</button>
 				</a>
 			</div>
 			<div class="right col-xs-4 normal">
-				<a id="next">
+				<a id="next" class="gone">
 					<button class="container btn btn-default center">Next</button>
 				</a>
 			</div>
@@ -62,23 +62,31 @@
 		$next = $("#next"),
 		$form = $("#createEntry");
 
+	function showElement($el) {
+		$el.removeClass('gone');
+		$el.addClass('inline');
+	}
+
+	function hideElement($el) {
+		$el.removeClass('inline');
+		$el.addClass('gone');
+	}
+
 	function toggleForm() {
 		if ($form.hasClass('gone')) {
-			$form.removeClass('gone');
-			$form.addClass('inline');
+			showElement($form);
 		}
 		else {
-			$form.removeClass('inline');
-			$form.addClass('gone');
+			hideElement($form);
 		}
 	}
 
-	if (page <= 0) {
-		$prev.css('visibility', 'hidden');
+	if (page > 0) {
+		showElement($prev);
 	}
 
-	if (page >= lastPage) {
-		$next.css('visibility', 'hidden');
+	if (page < lastPage) {
+		showElement($prev);
 	}
 
 	$prev.attr('href', '/blog/' + (page-1));
