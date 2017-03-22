@@ -18,10 +18,15 @@ import datetime, time
 pageSize = 2
 
 def incrementPageView(name):
-
+    pageView = PageView.objects.filter(page_name=name).first()
+    if pageView is None:
+        pageView = PageView(page_name=name)
+    pageView.page_count += 1
+    pageView.save()
 
 # View functions #
 def index(request):
+    incrementPageView('index')
 	return render(request, 'hades/index.html')
 
 def blog(request, page=-1):
@@ -31,6 +36,7 @@ def blog(request, page=-1):
 			submitBlogFromRequest(request)
 			return redirect('hades:blog')
 	else:
+	    incrementPageView('blog')
 		form = BlogForm()
 	
 	allBlogs = Blog.objects.order_by('-post_date')
@@ -69,6 +75,7 @@ def submitBlog(title, content):
 	blog.save()
 
 def nerdy(request):
+    incrementPageView('nerdy')
     return render(request, 'hades/nerdy.html')
 
 
@@ -80,6 +87,7 @@ counter = BadRequestCounter()
 
 @cache_control(private=True, max_age=60*60*24)
 def notFound(request, message=None):
+    incrementPageView('404')
 	ip = request.META['REMOTE_ADDR']
 	counter[ip] += 1
 	if counter[ip] > 10:
