@@ -9,13 +9,16 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 # Model imports #
-from .models import Blog
+from .models import Blog, PageView
 from .forms import BlogForm
 
 # Misc. imports #
 import datetime, time
 
 pageSize = 2
+
+def incrementPageView(name):
+
 
 # View functions #
 def index(request):
