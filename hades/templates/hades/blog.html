@@ -21,11 +21,11 @@
 	{% if blogs %}
 		{% for blog in blogs %}
 			<div class="entry">
-				<div>
+				<div class="larger">
 					<h3><strong>{{ blog.title }}</strong></h3>
 				</div>
-				<p><i>{{ blog.post_date }}</i></p>
-				<div id="{{ blog.id }}" class="entry-content">
+				<p class="smaller"><i>{{ blog.post_date }}</i></p>
+				<div id="{{ blog.id }}" class="normal">
 					<p>{{ blog.content }}</p>
 				</div>
 			</div>

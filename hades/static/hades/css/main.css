@@ -21,12 +21,16 @@ img {
 	width: 100%;
 }
 
+smaller {
+    font-size: 0.5em;
+}
+
 normal {
     font-size: 1em;
 }
 
 larger {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .header {
