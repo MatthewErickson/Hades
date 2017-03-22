@@ -5,20 +5,19 @@
 
 {% block content %}
 <div class="container">
-	<div class="row">
-		<div class="left col-xs-4 normal">
-			<a id="prev">
-				<button class="container btn btn-default center">Prev</button>
-			</a>
-		</div>
-		<div class="right col-xs-4 normal">
-			<a id="next">
-				<button class="container btn btn-default center">Next</button>
-			</a>
-		</div>
-	</div>
-
 	{% if blogs %}
+		<div class="row">
+			<div class="left col-xs-4 normal">
+				<a id="prev">
+					<button class="container btn btn-default center">Prev</button>
+				</a>
+			</div>
+			<div class="right col-xs-4 normal">
+				<a id="next">
+					<button class="container btn btn-default center">Next</button>
+				</a>
+			</div>
+		</div>
 		{% for blog in blogs %}
 			<div class="entry">
 				<div class="larger">
@@ -38,7 +37,7 @@
 	<div class="container center">
 		<button class="btn btn-default center" onclick="toggleForm()">Create entry</button>
 	</div>
-	<div id="createEntry" class="container row gone">
+	<div id="createEntry" class="container row gone center">
 		<form class="form-group" action="{% url 'hades:blog' %}" method="POST">
 			{% csrf_token %}
 			{{ form.as_p }}
