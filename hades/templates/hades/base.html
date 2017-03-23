@@ -15,7 +15,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="{% url 'hades:index' %}">Home</a></li>
+					<li><a href="{% url 'hades:index' %}">Home</a></li>
 					<li><a href="{% url 'hades:blog' %}">Blog</a></li>
 					<li><a href="{% url 'hades:nerdy' %}">Nerd&nbsp;Wall</a></li>
 				</ul>
@@ -47,6 +47,9 @@
 {% block javascript %}
 	{{ block.super }}
 	<script type="text/javascript" src="{% static 'hades/js/base.js' %}"></script>
+	<script type="text/javascript">
+		/* have logic here for setting active navbar tab */
+	</script>
 {% endblock %}
 
 {% block css %}
