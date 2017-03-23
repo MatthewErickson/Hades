@@ -18,17 +18,19 @@
 				</a>
 			</div>
 		</div>
-		{% for blog in blogs %}
-			<div class="entry col-xs-12 col-sm-4 col-md-3 col-lg-2">
-				<div class="larger">
-					<h3><strong>{{ blog.title }}</strong></h3>
+		<div class="row">
+			{% for blog in blogs %}
+				<div class="entry col-xs-12 col-sm-4 col-md-3 col-lg-2">
+					<div class="larger">
+						<h3><strong>{{ blog.title }}</strong></h3>
+					</div>
+					<p class="smaller"><i>{{ blog.post_date }}</i></p>
+					<div id="{{ blog.id }}" class="normal">
+						<p>{{ blog.content }}</p>
+					</div>
 				</div>
-				<p class="smaller"><i>{{ blog.post_date }}</i></p>
-				<div id="{{ blog.id }}" class="normal">
-					<p>{{ blog.content }}</p>
-				</div>
-			</div>
-		{% endfor %}
+			{% endfor %}
+		</div>
 	{% else %}
 		<div class="container center">
 			<h3>No posts available</h3>
