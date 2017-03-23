@@ -1,3 +1,7 @@
 #createEntry {
     max-width: 600px;
 }
+
+.entry {
+    max-width: 300px;
+}
