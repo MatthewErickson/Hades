@@ -7,4 +7,8 @@
     text-justify: inter-word;
     padding: 0.25em;
     margin: 0.25em;
+
+    h3 {
+        margin-top: 0px;
+    }
 }
