@@ -15,19 +15,20 @@ from .forms import BlogForm
 # Misc. imports #
 import datetime, time
 
-pageSize = 2
+pageSize = 5
 
-def incrementPageView(name):
+def incrementPageView(request, name):
     pageView = PageView.objects.filter(page_name=name).first()
     if pageView is None:
         pageView = PageView(page_name=name, page_count=0)
     pageView.page_count += 1
     pageView.save()
+    return pageView.page_count
 
 # View functions #
 def index(request):
-    incrementPageView('index')
-    return render(request, 'hades/index.html')
+    count = incrementPageView(request, 'index')
+    return render(request, 'hades/index.html', {'count': count})
 
 def blog(request, page=-1):
 	if request.method == 'POST':
@@ -36,7 +37,7 @@ def blog(request, page=-1):
 			submitBlogFromRequest(request)
 			return redirect('hades:blog')
 	else:
-	    incrementPageView('blog')
+	    incrementPageView(request, 'blog')
 	    form = BlogForm()
 	
 	allBlogs = Blog.objects.order_by('-post_date')
@@ -75,7 +76,7 @@ def submitBlog(title, content):
 	blog.save()
 
 def nerdy(request):
-    incrementPageView('nerdy')
+    incrementPageView(request, 'nerdy')
     return render(request, 'hades/nerdy.html')
 
 
@@ -87,7 +88,7 @@ counter = BadRequestCounter()
 
 @cache_control(private=True, max_age=60*60*24)
 def notFound(request, message=None):
-    incrementPageView('404')
+    incrementPageView(request, '404')
     ip = request.META['REMOTE_ADDR']
     counter[ip] += 1
     if counter[ip] > 10:
