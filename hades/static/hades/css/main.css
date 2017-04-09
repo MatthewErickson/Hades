@@ -12,6 +12,10 @@ body {
 	background: white;
 }
 
+.container {
+	background: white;
+}
+
 img {
     padding: 5px;
     margin: 5px;
