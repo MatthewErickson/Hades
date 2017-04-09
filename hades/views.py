@@ -18,36 +18,36 @@ import datetime, time
 pageSize = 5
 
 def incrementPageView(request, name):
-    pageView = PageView.objects.filter(page_name=name).first()
-    if pageView is None:
-        pageView = PageView(page_name=name, page_count=0)
-    pageView.page_count += 1
-    pageView.save()
-    return pageView.page_count
+	pageView = PageView.objects.filter(page_name=name).first()
+	if pageView is None:
+		pageView = PageView(page_name=name, page_count=0)
+	pageView.page_count += 1
+	pageView.save()
+	return pageView.page_count
 
 # View functions #
 def index(request):
-    count = incrementPageView(request, 'index')
-    return render(request, 'hades/index.html', {'count': count})
+	count = incrementPageView(request, 'index')
+	return render(request, 'hades/index.html', {'count': count})
 
 def blog(request, page=-1):
-    count = 0
+	count = 0
 	if request.method == 'POST':
 		form = BlogForm(request.POST)
 		if form.is_valid():
 			submitBlogFromRequest(request)
 			return redirect('hades:blog')
 	else:
-	    count = incrementPageView(request, 'blog')
-	    form = BlogForm()
-	
+		count = incrementPageView(request, 'blog')
+		form = BlogForm()
+
 	allBlogs = Blog.objects.order_by('-post_date')
 	length = len(allBlogs)
 	if length == 0:
 		lastPage = 0
 	else:
 		lastPage = (length -1) // pageSize
-	
+
 	if page == -1:
 		page = lastPage
 
@@ -78,8 +78,8 @@ def submitBlog(title, content):
 	blog.save()
 
 def nerdy(request):
-    count = incrementPageView(request, 'nerdy')
-    return render(request, 'hades/nerdy.html', {'count': count})
+	count = incrementPageView(request, 'nerdy')
+	return render(request, 'hades/nerdy.html', {'count': count})
 
 
 class BadRequestCounter(dict):
@@ -90,21 +90,21 @@ counter = BadRequestCounter()
 
 @cache_control(private=True, max_age=60*60*24)
 def notFound(request, message=None):
-    count = incrementPageView(request, '404')
-    ip = request.META['REMOTE_ADDR']
-    counter[ip] += 1
-    if counter[ip] > 10:
-        # do something here #
-        return HttpResponse("stop")
+	count = incrementPageView(request, '404')
+	ip = request.META['REMOTE_ADDR']
+	counter[ip] += 1
+	if counter[ip] > 10:
+		# do something here #
+		return HttpResponse("stop")
 
-    if message is None:
-        message = "404 - Page not found"
+	if message is None:
+		message = "404 - Page not found"
 
-    time = timezone.now()
-    print("Not found request from: " + ip)
-    return render(request, "hades/notFound.html", {
-        'ip' : ip,
-        'time': time,
-        'message': message,
-        'count': count
-    })
+	time = timezone.now()
+	print("Not found request from: " + ip)
+	return render(request, "hades/notFound.html", {
+		'ip' : ip,
+		'time': time,
+		'message': message,
+		'count': count
+	})
