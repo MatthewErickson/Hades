@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block header %}
+<div class="container">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -22,6 +23,7 @@
 			</div>
 		</div>
 	</nav>
+</div>
 {% endblock %}
 
 {% block messageArea %}
@@ -37,10 +39,14 @@
 {% endblock %}
 
 {% block footer %}
-	<div class="footer normal">
-		<label>Sebastian & Friends &copy; 2017</label>
+	<div class="footer normal container">
+		<div>
+			<label>Sebastian & Friends &copy; 2017</label>
+		</div>
 		{% if count %}
-		<label>{{ count }}</label>
+		<div>
+			<label>Page views: {{ count }}</label>
+		</div>
 		{% endif %}
 	</div>
 {% endblock %}

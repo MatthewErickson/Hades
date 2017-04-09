@@ -31,13 +31,14 @@ def index(request):
     return render(request, 'hades/index.html', {'count': count})
 
 def blog(request, page=-1):
+    count = 0
 	if request.method == 'POST':
 		form = BlogForm(request.POST)
 		if form.is_valid():
 			submitBlogFromRequest(request)
 			return redirect('hades:blog')
 	else:
-	    incrementPageView(request, 'blog')
+	    count = incrementPageView(request, 'blog')
 	    form = BlogForm()
 	
 	allBlogs = Blog.objects.order_by('-post_date')
@@ -59,6 +60,7 @@ def blog(request, page=-1):
 		'form' : form,
 		'page' : page,
 		'lastPage': lastPage,
+		'count': count
 	})
 
 def submitBlogFromRequest(request):
@@ -76,8 +78,8 @@ def submitBlog(title, content):
 	blog.save()
 
 def nerdy(request):
-    incrementPageView(request, 'nerdy')
-    return render(request, 'hades/nerdy.html')
+    count = incrementPageView(request, 'nerdy')
+    return render(request, 'hades/nerdy.html', {'count': count})
 
 
 class BadRequestCounter(dict):
@@ -88,7 +90,7 @@ counter = BadRequestCounter()
 
 @cache_control(private=True, max_age=60*60*24)
 def notFound(request, message=None):
-    incrementPageView(request, '404')
+    count = incrementPageView(request, '404')
     ip = request.META['REMOTE_ADDR']
     counter[ip] += 1
     if counter[ip] > 10:
@@ -104,4 +106,5 @@ def notFound(request, message=None):
         'ip' : ip,
         'time': time,
         'message': message,
+        'count': count
     })
